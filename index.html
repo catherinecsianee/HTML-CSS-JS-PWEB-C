@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>COFFEE MENU</h1>
+    <div class="gallery">
+        <div class="item" onclick="openModal('espresso', 'Espresso adalah kopi murni yang diseduh dengan tekanan tinggi.', 'Rp 20.000')">
+            <img src="images/espresso.jpeg" alt="Espresso">
+            <p>Espresso</p>
+        </div>
+        <div class="item" onclick="openModal('redeye', 'Red Eye adalah kopi yang dicampur dengan satu shot espresso.', 'Rp 25.000')">
+            <img src="images/redeye.jpeg" alt="Red Eye">
+            <p>Red Eye</p>
+        </div>
+        <div class="item" onclick="openModal('blackeye', 'Black Eye memiliki dua shot espresso dalam secangkir kopi.', 'Rp 30.000')">
+            <img src="images/blackeye.jpeg" alt="Black Eye">
+            <p>Black Eye</p>
+        </div>
+        <div class="item" onclick="openModal('americano', 'Americano dibuat dengan menambahkan air panas ke espresso.', 'Rp 22.000')">
+            <img src="images/americano.jpg" alt="Americano">
+            <p>Americano</p>
+        </div>
+        <div class="item" onclick="openModal('macchiato', 'Macchiato adalah espresso dengan sedikit busa susu.', 'Rp 28.000')">
+            <img src="images/macchiato.png" alt="Macchiato">
+            <p>Macchiato</p>
+        </div>
+        <div class="item" onclick="openModal('vienna', 'Vienna Coffee dibuat dengan espresso dan krim kocok.', 'Rp 32.000')">
+            <img src="images/vienna.jpeg" alt="Vienna">
+            <p>Vienna</p>
+        </div>
+        <div class="item" onclick="openModal('latte', 'Latte memiliki lebih banyak susu dengan busa tipis di atasnya.', 'Rp 26.000')">
+            <img src="images/latte.jpg" alt="Latte">
+            <p>Latte</p>
+        </div>
+        <div class="item" onclick="openModal('mocha', 'Mocha adalah perpaduan espresso, cokelat, dan susu.', 'Rp 30.000')">
+            <img src="images/mocha.webp" alt="Mocha">
+            <p>Mocha</p>
+        </div>
+        <div class="item" onclick="openModal('cafeaulait', 'Cafe au Lait adalah kopi dengan susu yang sama banyaknya.', 'Rp 24.000')">
+            <img src="images/cafeaulait.jpg" alt="Cafe au Lait">
+            <p>Café au Lait</p>
+        </div>
+    </div>
+    <div class="modal" id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <p id="modal-price"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
